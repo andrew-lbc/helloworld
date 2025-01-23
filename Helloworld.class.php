@@ -276,7 +276,7 @@ class Helloworld extends FreePBX_Helpers implements BMO
 		$subhead = _('Item List');
 		$content = load_view(__DIR__ . '/views/grid.php');
 
-		if ('form' == $_REQUEST['view']) {
+		if (isset($_REQUEST['view']) && 'form' == $_REQUEST['view']) {
 			$subhead = _('Add Item');
 			$content = load_view(__DIR__ . '/views/form.php');
 			if (isset($_REQUEST['id']) && !empty($_REQUEST['id'])) {
