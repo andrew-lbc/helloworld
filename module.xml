@@ -6,7 +6,7 @@
 	<category>Development</category>
 	<Publisher>James Finstrom</Publisher>
 	<info>http://wiki.freepbx.org/pages/viewpage.action?pageId=19498386</info>
-	<licence>GPL</licence>
+	<license>GPL</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-2.0.txt</licenselink>
 	<database>
         	<table name="helloworld">
