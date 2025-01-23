@@ -1,5 +1,5 @@
-<form action="" method="post" class="fpbx-submit" id="hwform" name="hwform" data-fpbx-delete="config.php?display=helloworld&action=delete&id=<?php echo $id?>">
-<input type="hidden" name='action' value="<?php echo $id?'edit':'add' ?>">
+<form action="" method="post" class="fpbx-submit" id="hwform" name="hwform" data-fpbx-delete="config.php?display=helloworld&action=delete&id=<?php echo isset($id) ? $id : '' ?>">
+<input type="hidden" name='action' value="<?php echo ( isset($id) && $id ) ? 'edit' : 'add' ?>">
 <!--Subject-->
 <div class="element-container">
 	<div class="row">
@@ -11,7 +11,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="subject"></i>
 					</div>
 					<div class="col-md-9">
-						<input type="text" class="form-control" id="subject" name="subject" value="<?php echo $subject?>">
+						<input type="text" class="form-control" id="subject" name="subject" value="<?php echo isset($subject) ? $subject : '' ?>">
 					</div>
 				</div>
 			</div>
@@ -35,8 +35,7 @@
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="body"></i>
 					</div>
 					<div class="col-md-9">
-						<textarea class="form-control" id="body" name="body"><?php echo $body?>
-						</textarea>
+						<textarea class="form-control" id="body" name="body"><?php echo isset($body) ? $body : '' ?></textarea>
 					</div>
 				</div>
 			</div>
